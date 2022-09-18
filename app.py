@@ -12,6 +12,10 @@ app=Flask(__name__)
 #api=Api(app)
 
 #app.config['UPLOAD_FOLDER']="static/images"
+@app.route('/')
+def hello():
+    return "Hello test-Heroku"
+
 ss=''
 @app.route('/upload',methods=['GET','POST'])
 def upload_file():
